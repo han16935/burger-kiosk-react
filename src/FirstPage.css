@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Icon{
+    cursor: pointer; /*만약 보안상으로 커서가 포인터로 보이는게 싫으면 없애기*/
+}
+
+
+
+body {
+    background-image: url(./img/firstPage1.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+.first_page_container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.gachon_burger {
+    font-family: 'JalnanGothic';
+    font-size: 112px;
+    color: #ffffff; /* 버거킹 컬러 */
+}
+
+.button_container {
+    margin-top: 40px;
+}
+
+.order_button {
+    font-family: 'JalnanGothic';
+    line-height: 200%;
+    font-size: 50px;
+    padding: 60px 60px;
+    margin: 10px 30px;
+    background-color: #ff5733; /* 버거킹 컬러 */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background_color 0.3s ease;
+    
+}
+
+
+.order_button_takeout {
+    font-family: 'JalnanGothic';
+    line-height: 200%;
+    font-size: 50px;
+    padding: 60px 60px;
+    margin: 10px 30px;
+    background-color: #ff5733; /* 버거킹 컬러 */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background_color 0.3s ease;
+}
+
+
+
+.order_button:hover {
+    background-color: #ff824a; /* 버거킹 컬러의 밝은 조합 */
+}
+
+
+.order_button_takeout:hover {
+    background-color: #ff824a; /* 버거킹 컬러의 밝은 조합 */
+}
+
+.eathere {
+    min-width: 15px;
+    min-height: 15px;
+    width: 12vmin;
+    height: 12vmin;
+}
+
+.takeout {
+    min-width: 10px;
+    min-height: 10px;
+    width: 12vmin;
+    height: 12vmin;
+}
