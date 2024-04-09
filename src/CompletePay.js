@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const headers = [
     {
@@ -37,6 +38,7 @@ const items = [
 
 
 function ItemTable({ headers, items }) {
+  
     return (
       <table>
         <thead>
@@ -63,6 +65,10 @@ function ItemTable({ headers, items }) {
 
 
 const CompletePay = () => {
+  const navigate = useNavigate();
+  const moveToFirst = () => {
+    navigate('../');
+  }
     return (
     <div className = "Paydiv">
         
@@ -91,7 +97,7 @@ const CompletePay = () => {
             <br/>
 
             <button>온라인영수증 발급</button>
-            <button>처음으로 돌아가기</button>
+            <button onClick={moveToFirst}>처음으로 돌아가기</button>
            
     </div>
     );

@@ -19,7 +19,8 @@ function App() {
             <Route path="ShoppingBag" element={<ShoppingBag/>}/>
           </Route>
           <Route path="/PaymentChoice" element={<PaymentChoice/>}/>
-          <Route path="/CompletePay" element={<CompletePay />}></Route>
+          <Route path="/CompletePay" element={<CompletePay />}>
+          </Route>
         </Routes>
       </Router>
     </>
