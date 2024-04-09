@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./PaymentChoice.css";
-import CompletePay from "../CompletePay";
 import { useNavigate } from 'react-router-dom';
 
 export function PaymentChoice() {
