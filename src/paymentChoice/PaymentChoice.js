@@ -1,32 +1,35 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./PaymentChoice.css";
-import { useNavigate } from 'react-router-dom';
+import {fetchSalesData} from "../SalesStatistics";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export function PaymentChoice() {
+  const items = useLocation().state;
   const navigate = useNavigate();
+
   const movePage = () => {
-    navigate('/CompletePay');
-  }
+    navigate('/CompletePay', { state: items });
+    fetchSalesData(items);
+  };
+
   return (
-    <div>
-      <h2>결제 수단을 선택해주세요</h2>
-      <div class="container">
-        <button path="/CompletePay" onClick={movePage} class="item">
-          신용카드, 삼성페이
-        </button>
-        <button path="/CompletePay" onClick={movePage} class="item">
-          모바일 교환권
-        </button>
-        <button path="/CompletePay" onClick={movePage} class="item">
-          현금
-        </button>
-        <button path="/CompletePay" onClick={movePage} class="item">
-          QR결제
-        </button>
+      <div>
+        <h2>Please select a payment method</h2>
+        <div className="container">
+          <button onClick={movePage} className="item">
+            Credit Card, Samsung Pay
+          </button>
+          <button onClick={movePage} className="item">
+            Mobile Voucher
+          </button>
+          <button onClick={movePage} className="item">
+            Cash
+          </button>
+          <button onClick={movePage} className="item">
+            QR Payment
+          </button>
+        </div>
       </div>
-    </div>
   );
 }
 

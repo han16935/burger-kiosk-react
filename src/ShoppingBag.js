@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function ShoppingBag({ items, onCountChange, totalPrice }) {
     const navigate = useNavigate();
     const movePage = () => {
-        navigate('/PaymentChoice');
+        navigate('/PaymentChoice', {state : items});
     }
     return (
         <div className="shoppingBag">
