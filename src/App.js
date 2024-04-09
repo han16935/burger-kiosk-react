@@ -1,4 +1,5 @@
 // App.js
+// discord practice
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PaymentChoice from "./paymentChoice/PaymentChoice";
