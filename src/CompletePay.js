@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const headers = [
     {
@@ -15,27 +15,6 @@ const headers = [
       value: 'price'
     }
 ];
-
-
-
-const items = [
-    {
-      id: '1',
-      name: 'Chicken burger',
-      price: '3500'
-    },
-    {
-        id: '2',
-        name: 'French fries',
-        price: '1500'
-    },
-    {
-        id: '3',
-        name: 'Cola',
-        price: '1000'
-    }
-];
-
 
 function ItemTable({ headers, items }) {
   
@@ -65,6 +44,7 @@ function ItemTable({ headers, items }) {
 
 
 const CompletePay = () => {
+  const items = useLocation().state
   const navigate = useNavigate();
   const moveToFirst = () => {
     navigate('../');
