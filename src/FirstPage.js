@@ -33,6 +33,7 @@ function FirstPage() {
     };
 
     return (
+        <div className="background">
         <div className="first_page_container">
             <img className="Icon" alt="logo" src={logo} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}></img>
             <h1 className="gachon_burger">버거킹 가천대점</h1>
@@ -40,6 +41,7 @@ function FirstPage() {
                 <button className="order_button" onClick={movePage}><img className="eathere" src={eathere}></img><br />매장 주문</button>
                 <button className="order_button_takeout" onClick={movePage}> <img className="takeout" src={takeout}></img><br />포장 주문</button>
             </div>
+        </div>
         </div>
     );
 }

@@ -6,6 +6,7 @@ header {
   background-color: orange;
 }
 li {
+  text-align: center;
   float: left;
   width: 300px;
   margin-bottom: 100px;
@@ -34,3 +35,4 @@ li {
   border-right: 1px solid red;
   margin-right: 10px;
 }
+

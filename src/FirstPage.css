@@ -10,18 +10,14 @@
 }
 
 
-
-body {
+.first_page_container {
+    text-align: center;
+    margin-top: 200px;
     background-image: url(./img/firstPage1.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
-  }
-
-.first_page_container {
-    text-align: center;
-    margin-top: 200px;
 }
 
 .gachon_burger {

@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import styles from "./SecondPage.css"; // CSS 스타일을 적용하기 위해 임포트합니다.
 import ShoppingBag from "./ShoppingBag"; // ShoppingBag 컴포넌트를 임포트합니다.
-
+import whopper from './img/guinness_whopper.jpg';
+import BLT from './img/chickenkingBLT.jpg';
+import cola from './img/cocacola.jpg';
+import fanta from './img/fanta.jpg';
+import frenchfries from './img/frenchfries.jpg';
+import cheesestick from './img/cheesestick.jpg';
 const menu = [
-    { id: 1, name: 'Guinness Whopper', price: '5000', image: 'img/guinness_whopper.jpg' },
-    { id: 2, name: 'ChickenKing BLT', price: '4500', image: 'img/chickenkingBLT.jpg' },
-    { id: 3, name: 'Cocacola', price: '2000', image: 'img/cocacola.jpg' },
-    { id: 4, name: 'Fanta', price: '2000', image: 'img/fanta.jpg' },
-    { id: 5, name: 'French Fries', price: '1500', image: 'img/frenchfries.jpg' },
-    { id: 6, name: 'Cheese Stick', price: '2000', image: 'img/cheesestick.jpg' }
+    { id: 1, name: 'Guinness Whopper', price: '5000', image: whopper },
+    { id: 2, name: 'ChickenKing BLT', price: '4500', image: BLT },
+    { id: 3, name: 'Cocacola', price: '2000', image: cola },
+    { id: 4, name: 'Fanta', price: '2000', image: fanta },
+    { id: 5, name: 'French Fries', price: '1500', image: frenchfries },
+    { id: 6, name: 'Cheese Stick', price: '2000', image: cheesestick }
 ];
 
 export function SecondPage() {
