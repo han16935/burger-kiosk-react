@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function ShoppingBag({ items, onCountChange, totalPrice }) {
+    const navigate = useNavigate();
+    const movePage = () => {
+        navigate('./PaymentChoice');
+    }
     return (
         <div className="shoppingBag">
             <h2>장바구니</h2>
@@ -17,7 +23,7 @@ function ShoppingBag({ items, onCountChange, totalPrice }) {
             </ul>
             <div>총합: {totalPrice}원</div>
             <div>
-                <button>결제하기</button>
+                <button onClick={movePage}>결제하기</button>
             </div>
         </div>
     );

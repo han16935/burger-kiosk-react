@@ -56,3 +56,5 @@ export function SecondPage() {
         </div>
     );
 }
+
+export default SecondPage;

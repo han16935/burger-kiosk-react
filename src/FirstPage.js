@@ -10,6 +10,11 @@ function FirstPage() {
     const timeout = useRef(null);
     const navigate = useNavigate();
 
+    const movePage = () => {
+        navigate('./SecondPage');
+    }
+
+
     const handleMouseDown = () => {
         timeout.current = setTimeout(() => {
             setLongPress(true);
@@ -32,8 +37,8 @@ function FirstPage() {
             <img className="Icon" alt="logo" src={logo} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}></img>
             <h1 className="gachon_burger">버거킹 가천대점</h1>
             <div className="button_container">
-                <button className="order_button"> <img className="eathere" src={eathere}></img><br />매장 주문</button>
-                <button className="order_button_takeout"> <img className="takeout" src={takeout}></img><br />포장 주문</button>
+                <button className="order_button" onClick={movePage}><img className="eathere" src={eathere}></img><br />매장 주문</button>
+                <button className="order_button_takeout" onClick={movePage}> <img className="takeout" src={takeout}></img><br />포장 주문</button>
             </div>
         </div>
     );
