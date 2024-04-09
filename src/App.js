@@ -15,8 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstPage/>}/>
           <Route path="/salesStatistics" element={<SalesStatistics/>}/>
-          <Route path="/SecondPage" element={<SecondPage/>}/>
-          <Route path="/ShoppingBag" element={<ShoppingBag/>}/>
+          <Route path="/SecondPage" element={<SecondPage/>}>
+            <Route path="ShoppingBag" element={<ShoppingBag/>}/>
+          </Route>
           <Route path="/PaymentChoice" element={<PaymentChoice/>}/>
           <Route path="/CompletePay" element={<CompletePay />}></Route>
         </Routes>
