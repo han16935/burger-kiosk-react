@@ -11,12 +11,12 @@ import cheesestick from './img/cheesestick.jpg';
 import back from './img/back.png';
 
 const menu = [
-    { id: 1, name: 'Guinness Whopper', price: '5000', image: whopper },
-    { id: 2, name: 'ChickenKing BLT', price: '4500', image: BLT },
-    { id: 3, name: 'Cocacola', price: '2000', image: cola },
-    { id: 4, name: 'Fanta', price: '2000', image: fanta },
-    { id: 5, name: 'French Fries', price: '1500', image: frenchfries },
-    { id: 6, name: 'Cheese Stick', price: '2000', image: cheesestick }
+    { id: 1, name: '기네스 와퍼', 가격: '5000', image: whopper },
+    { id: 2, name: '치킨킹 BLT', 가격: '4500', image: BLT },
+    { id: 3, name: '코카콜라', 가격: '2000', image: cola },
+    { id: 4, name: '환타', 가격: '2000', image: fanta },
+    { id: 5, name: '감자튀김', 가격: '1500', image: frenchfries },
+    { id: 6, name: '치즈스틱', 가격: '2000', image: cheesestick }
 ];
 
 export function SecondPage() {
@@ -44,16 +44,16 @@ export function SecondPage() {
         }));
     };
 
-    const totalPrice = menuCounts.reduce((acc, menuItem) => {
+    const total가격 = menuCounts.reduce((acc, menuItem) => {
         const menuInfo = menu.find(item => item.id === menuItem.id);
-        return acc + (parseInt(menuInfo.price) * menuItem.count); // 가격을 숫자로 변환합니다.
+        return acc + (parseInt(menuInfo.가격) * menuItem.count); // 가격을 숫자로 변환합니다.
     }, 0);
 
     const menuItems = menu.map((item) => (
         <li key={item.id} onClick={() => handleMenuClick(item.id)}>
             <img src={item.image} alt={item.name} style={{width: '150px', height: '150px'}} /> {/* 이미지 표시 */}
             <div>{item.name}</div>
-            <div>Price: {item.price}</div>
+            <div>가격: {item.가격}</div>
         </li>
     ));
 
@@ -63,7 +63,7 @@ export function SecondPage() {
                 <button onClick={()=> navigate(-1)} style={{width:'100px', height:'100px'}}><img src= {back} style={{width:'60px', height:'60px'}}></img></button> {/* 이 버튼이 실제로 동작하도록 하려면 추가적인 로직이 필요합니다. */}
             </header>
             <ul>{menuItems}</ul>
-            <ShoppingBag items={menuCounts.filter(menuItem => menuItem.count > 0)} onCountChange={handleCountChange} totalPrice={totalPrice} />
+            <ShoppingBag items={menuCounts.filter(menuItem => menuItem.count > 0)} onCountChange={handleCountChange} total가격={total가격} />
         </div>
     );
 }
