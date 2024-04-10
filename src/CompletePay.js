@@ -63,7 +63,6 @@ const CompletePay = () => {
             <br />
             <br />
             <br />
-            <h2>orderNum : {orderNum}</h2>
             <br />
             <br />
             <br />
