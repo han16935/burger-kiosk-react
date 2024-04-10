@@ -46,9 +46,12 @@ const CompletePay = () => {
     const [orderNum, setOrderNum] = useState(1); // Initialize orderNum state with 1
 
     useEffect(() => {
-        // Increase orderNum by 1 each time the component is rendered
-        setOrderNum(prevOrderNum => prevOrderNum + 1);
+        // Increase orderNum by 1 when the component is rendered
+        setOrderNum(orderNum+1);
     }, []);
+    
+    
+    
 
     const moveToFirst = () => {
         navigate('../');

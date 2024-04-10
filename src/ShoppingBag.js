@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './ShoppingBag.css';
 
 
 function ShoppingBag({ items, onCountChange, totalPrice }) {
@@ -21,9 +22,9 @@ function ShoppingBag({ items, onCountChange, totalPrice }) {
                     </li>
                 ))}
             </ul>
-            <div>총합: {totalPrice}원</div>
+            <div className="totalpay" style = {{float:'right'}}>총합: {totalPrice}원</div>
             <div>
-                <button onClick={movePage}>결제하기</button>
+                <button className = "paybtn" onClick={movePage} style = {{float:'right'}}>결제하기</button>
             </div>
         </div>
     );
