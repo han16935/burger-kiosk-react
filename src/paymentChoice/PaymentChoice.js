@@ -14,19 +14,19 @@ export function PaymentChoice() {
 
   return (
       <div>
-        <h2>Please select a payment method</h2>
+        <h2>결제 수단을 선택해주세요.</h2>
         <div className="container">
           <button onClick={movePage} className="item">
-            Credit Card, Samsung Pay
+            신용카드, 삼성페이
           </button>
           <button onClick={movePage} className="item">
-            Mobile Voucher
+            모바일 교환권
           </button>
           <button onClick={movePage} className="item">
-            Cash
+            현금
           </button>
           <button onClick={movePage} className="item">
-            QR Payment
+            QR결제
           </button>
         </div>
       </div>

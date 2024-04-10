@@ -1,12 +1,12 @@
 import React from "react";
 
 const salesData = [
-  { productName: 'Guinness Whopper', price: 5000, quantity: 0 },
-  { productName: 'ChickenKing BLT', price: 4500, quantity : 0},
-  { productName: 'Cocacola', price: 2000, quantity: 0 },
-  { productName: 'Fanta', price: 2000, quantity: 0},
-  { productName: 'French Fries', price: 1500, quantity: 0},
-  { productName: 'Cheese Stick', price: 2000, quantity: 0}
+  { productName: '기네스 와퍼', price: 5000, quantity: 0 },
+  { productName: '치킨킹 BLT', price: 4500, quantity : 0},
+  { productName: '코카콜라', price: 2000, quantity: 0 },
+  { productName: '환타', price: 2000, quantity: 0},
+  { productName: '감자튀김', price: 1500, quantity: 0},
+  { productName: '치즈스틱', price: 2000, quantity: 0}
 ];
 
 var totalSales = 0;

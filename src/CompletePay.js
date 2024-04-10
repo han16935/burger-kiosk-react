@@ -13,6 +13,10 @@ const headers = [
     {
         text: '가격',
         value: 'price'
+    },
+    {
+        text : '수량',
+        value : 'quantity'
     }
 ];
 
@@ -28,11 +32,12 @@ function ItemTable({ headers, items }) {
             </tr>
             </thead>
             <tbody>
-            {items.map(({ id, name, price }) => (
+            {items.map(({ id, name, price, count}) => (
                 <tr key={id}>
                     <td>{id}</td>
                     <td>{name}</td>
                     <td>{price}</td>
+                    <td>{count}</td>
                 </tr>
             ))}
             </tbody>
@@ -43,15 +48,6 @@ function ItemTable({ headers, items }) {
 const CompletePay = () => {
     const items = useLocation().state;
     const navigate = useNavigate();
-    const [orderNum, setOrderNum] = useState(1); // Initialize orderNum state with 1
-
-    useEffect(() => {
-        // Increase orderNum by 1 when the component is rendered
-        setOrderNum(orderNum+1);
-    }, []);
-    
-    
-    
 
     const moveToFirst = () => {
         navigate('../');
@@ -66,11 +62,9 @@ const CompletePay = () => {
             <br />
             <br />
             <br />
-            <h2>orderNum : {orderNum}</h2>
             <br />
             <br />
             <br />
-            <button>온라인영수증 발급</button>
             <button onClick={moveToFirst}>처음으로 돌아가기</button>
         </div>
     );
